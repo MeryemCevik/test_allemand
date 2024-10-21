@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Conjugaison</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Quiz de Conjugaison</h1>
+
+        <div id="conjugation-quiz">
+            <div id="pronouns-list">
+                <!-- Les pronoms et verbes seront insérés ici par JavaScript -->
+            </div>
+
+            <div id="action-buttons">
+                <button id="validate-btn" onclick="validateConjugation()">Valider</button>
+            </div>
+        </div>
+
+        <div id="result-container">
+            <h2>Résultats Incorrects</h2>
+            <ul id="incorrect-conjugations">
+                <!-- Les réponses incorrectes seront affichées ici -->
+            </ul>
+            <a href="index.html" class="quiz-btn">Retour à la page d'accueil</a>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

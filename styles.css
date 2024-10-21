@@ -1,0 +1,111 @@
+/* Styles par défaut (mode nuit) */
+:root {
+    --bg-color: #2c3e50; /* Couleur de fond */
+    --text-color: #ecf0f1; /* Couleur du texte */
+    --container-bg: #34495e; /* Couleur de fond du conteneur */
+    --button-bg: #3498db; /* Couleur des boutons */
+    --button-text-color: #ecf0f1; /* Couleur du texte des boutons */
+    --border-color: #95a5a6; /* Couleur des bordures */
+    --result-bg: #2c3e50; /* Couleur de fond des résultats */
+    --hover-button-bg: #2980b9; /* Couleur de fond au survol des boutons */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    background-color: var(--container-bg);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espacement entre les boutons */
+}
+
+.quiz-btn {
+    display: inline-block;
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none; /* Enlève le soulignement du lien */
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.quiz-btn:hover {
+    background-color: var(--hover-button-bg);
+}
+
+#word-list {
+    margin-bottom: 20px;
+}
+
+.word-item {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.word-item input {
+    padding: 5px;
+    width: 50%;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: #ecf0f1; /* Couleur de fond des champs de saisie */
+    color: #34495e; /* Couleur du texte des champs de saisie */
+}
+
+#next-btn, #validate-btn {
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#next-btn:hover, #validate-btn:hover {
+    background-color: var(--hover-button-bg);
+}
+
+#result-container {
+    display: none;
+    margin-top: 20px;
+}
+
+#incorrect-answers, #incorrect-conjugations {
+    list-style-type: none;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+}
